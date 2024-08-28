@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cubigma: The Game</title>
+    <!--Link CSS-->
+    <link rel="stylesheet" href="/public/styles/styles.css">
+    <!--Link Google Fonts-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Geologica:wght@100..900&family=Pixelify+Sans:wght@400..700&family=Poiret+One&family=Raleway:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Bungee+Tint&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Macondo&display=swap" rel="stylesheet">
+    <!--Link favicon-->
+    <link rel="shortcut icon" href="/public/assets/icons/cube.png" type="image/x-icon">
+</head>
+<body>
+    <nav>
+
+    </nav>
+    <main>
+        <section class="contCubeLeft">
+            <figure class="preloader" id="preloader">
+                <figure class="cube" id="cube">
+                    <section class="face front" id="faceFront">
+                        <h1 class="errorMessage">Te equivocaste</h1>
+                        <section class="frontButtons">
+                            <img id="knob1" src="/public/assets/icons/knob.png" alt="Knob Icon">
+                            <img id="knob2" src="/public/assets/icons/knob.png" alt="Knob Icon">
+                            <img id="knob3" src="/public/assets/icons/knob.png" alt="Knob Icon">
+                            <img id="knob4" src="/public/assets/icons/knob.png" alt="Knob Icon">
+                            <img id="knob5" src="/public/assets/icons/knob.png" alt="Knob Icon">
+                            <img id="knob6" src="/public/assets/icons/knob.png" alt="Knob Icon">
+                            <img id="knob7" src="/public/assets/icons/knob.png" alt="Knob Icon">
+                            <img id="knob8" src="/public/assets/icons/knob.png" alt="Knob Icon">
+                            <img id="knob9" src="/public/assets/icons/knob.png" alt="Knob Icon">
+                            <img id="knob10" src="/public/assets/icons/knob.png" alt="Knob Icon">
+                        </section>
+                        <section class="frontLights">
+                            <div class="light1" id="light1"></div>
+                            <div class="light2" id="light2"></div>
+                            <div class="light3" id="light3"></div>
+                            <div class="light4" id="light4"><p id="number6">6</p></div>
+                            <div class="light5" id="light5"><p id="number1">1</p></div>
+                            <div class="light6" id="light6"><p id="number7">7</p></div>
+                            <div class="light7" id="light7"><p id="number4">4</p></div>
+                            <div class="light8" id="light8"></div>
+                            <div class="light9" id="light9"></div>
+                            <div class="light10" id="light10"></div>
+                        </section>
+                        <section class="enigmaSuccess" id="enigmaSuccess">
+                            <h1>Enhorabuena, has completado este nivel.</h1>
+                            <p>Vas bien, aunque tienes un largo camino aún...</p>
+                            <div class="buttonsSuccess">
+                                <button id="saveFront">Guardar progreso</button>
+                            </div>
+                        </section>
+                    </section>
+                    <div class="face back" id="faceBack">
+                        <p>En los detalles encontrarás la respuesta</p>
+                        <div class="errorMessage numberErrorMessage" id="numberErrorMessage">
+                            <h1>Número incorrecto</h1>
+                        </div>
+                        <input type="number" name="number" id="number" maxlength="4">
+                        <h1 id="number6174">6174</h1>
+                        <button type="submit" class="verifyButton" id="verifyButton">Verificar</button>
+                        <div class="enigmaSuccess numberSuccess" id="numberSuccess">
+                            <h1>Enhorabuena, vas muy bien.</h1>
+                            <p>Te esperan nuevos desafíos a continuación.</p>
+                            <div class="buttonsSuccess">
+                                <button id="saveBack">Guardar progreso</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="face top" id="faceTop">
+                        <div class="dynamicBackground">
+                            <div class="upView">
+                                <img id="leftTop" class="leftTop" src="/public/assets/img/backgroundLeftTop.png" alt="">
+                                <img class="rightTop" src="/public/assets/img/backgroundRightTop.png" alt="">
+                            </div>
+                            <div class="bottomView">
+                                <img class="leftBottom" src="/public/assets/img/backgroundLeftBottom.png" alt="">
+                                <img class="rightBottom" src="/public/assets/img/backgroundRightBottom.png" alt="">
+                            </div>
+                        </div>
+                        <div class="contTop" id="faceTop">
+                            <h1 class="countdown"></h1>
+                            <p id="titleFaceTop">Todo es un ENIGMA <br> "Divide y vencerás" Julio CÉSAR </p>
+                            <form class="contLettersInputs" id="formLetters">
+                                <div class="contOnlyLetters">
+                                    <div class="letterInput">
+                                        <label for="">Y</label>
+                                        <input type="text" name="letterY" id="letterY" maxlength="1" value="V" disabled required>
+                                    </div>
+                                    <div class="letterInput">
+                                        <label for="">D</label>
+                                        <input class="letterD" type="text" name="letterD" id="letterD" maxlength="1" placeholder="?" required>
+                                    </div>
+                                    <div class="letterInput">
+                                        <label for="">V</label>
+                                        <input type="text" name="letterV" id="letterV" maxlength="1" placeholder="?" required>
+                                    </div>
+                                    <div class="letterInput space">
+                                        <label for="">D</label>
+                                        <input type="text" name="letterD_2" id="letterD_2" maxlength="1" value="A" disabled required>
+                                    </div>
+                                    <div class="letterInput">
+                                        <label for="">S</label>
+                                        <input type="text" name="letterS" id="letterS" maxlength="1" placeholder="?" required>
+                                    </div>
+                                    <div class="letterInput">
+                                        <label for="">H</label>
+                                        <input type="text" name="letterH" id="letterH" maxlength="1" placeholder="?" required>
+                                    </div>
+                                    <div class="letterInput">
+                                        <label for="">U</label>
+                                        <input type="text" name="letterU" id="letterU" maxlength="1" placeholder="?" required>
+                                    </div>
+                                    <div class="letterInput">
+                                        <label for="">G</label>
+                                        <input type="text" name="letterG" id="letterG" maxlength="1" placeholder="?" required>
+                                    </div>
+                                    <div class="letterInput">
+                                        <label for="">H</label>
+                                        <input type="text" name="letterH_2" id="letterH_2" maxlength="1" placeholder="?" required>
+                                    </div>
+                                    <div class="letterInput">
+                                        <label for="">U</label>
+                                        <input type="text" name="letterU_2" id="letterU_2" maxlength="1" placeholder="?" required>
+                                    </div>
+                                </div>
+                                <button type="submit" class="verifyButton letterButton" id="verifyLetterButton">Verificar</button>
+                            </form>
+                            <div class="topSuccess" id="numberSuccess">
+                                <h1>¡Enhorabuena, vas muy bien!</h1>
+                                <p>Te esperan nuevos desafíos a continuación...</p>
+                                <div class="topButtonSuccess">
+                                    <button id="saveTop">Guardar progreso</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="face bottom" id="faceBottom">
+                        <div class="dynamicBackground">
+                            <h1>Bottom</h1>
+                        </div>
+                    </div>
+                    <div class="face left" id="faceLeft">
+                        <div class="dynamicBackground">
+                            <div class="upView">
+                                <img id="leftTop" class="leftTop" src="/public/assets/img/backgroundLeftTop.png" alt="">
+                                <img class="rightTop" src="/public/assets/img/backgroundRightTop.png" alt="">
+                            </div>
+                            <div class="bottomView">
+                                <img class="leftBottom" src="/public/assets/img/backgroundLeftBottom.png" alt="">
+                                <img class="rightBottom" src="/public/assets/img/backgroundRightBottom.png" alt="">
+                            </div>
+                        </div>
+                        <div class="contLeft">
+                            <button id="pruebaFondo">Probar</button>
+                        </div>
+                    </div>
+                    <div class="face right" id="faceRight">
+                        <div class="dynamicBackground">
+                            <h1>Right</h1>
+                        </div>
+                    </div>
+                </figure>
+            </figure>
+            <!--CONTROLES DEL CUBO-->
+            <div class="cubeControls" id="cubeControls">
+                <div class="leftControl">
+                    <div class="backButton">
+                        <img class="arrow backArrow" id="backButton" src="/public/assets/icons/back.png" alt="Back Arrow">
+                    </div>
+                </div>
+                <div class="rightControl">
+                    <div class="topButton">
+                        <img class="arrow" id="topButton" src="/public/assets/icons/arrow.png" alt="Up Arrow">
+                    </div>
+                    <div class="leftRightButton">
+                        <img class="arrow leftArrow" id="leftButton" src="/public/assets/icons/arrow.png" alt="Left Arrow">
+                        <img class="arrow frontCube" id="frontButton" src="/public/assets/icons/cube.png" alt="Front Cube Icon">
+                        <img class="arrow rightArrow" id="rightButton" src="/public/assets/icons/arrow.png" alt="Right Arrow">
+                    </div>
+                    <div class="bottomButton">
+                        <img class="arrow bottomArrow" id="bottomButton" src="/public/assets/icons/arrow.png" alt="Bottom Arrow">
+                    </div>
+                </div>
+                <div>
+                    <audio id="soundEffect" src="/public/assets/effects/controlSound.mp3"></audio>
+                    <audio id="cubeVibrationEffect" src="/public/assets/effects/finalAnimation.mp3"></audio>
+                    <audio id="musicFinalMessage" src="/public/assets/effects/finalMessage_02.mp3"></audio>
+                    <audio id="musicCredits" src="/public/assets/effects/creditsMusic_02.mp3"></audio>
+                    <audio id="lvlUp" src="/public/assets/effects/lvlUpSound.mp3"></audio>    
+                    <audio id="openPapyrus" src="/public/assets/effects/openPapyrusSound.mp3"></audio>    
+                    <audio id="closePapyrus" src="/public/assets/effects/closePapyrusSound.mp3"></audio>    
+                    <audio id="saveGameSound" src="/public/assets/effects/saveGameSound.mp3"></audio>    
+                    <audio id="jumpScareSound" src="/public/assets/effects/jumpScareSound.mp3"></audio>    
+                    <audio id="errorSound" src="/public/assets/effects/errorSound.mp3"></audio>    
+                </div>
+            </div>
+            
+        </section>
+        <!--CONTENEDOR DERECHO: NOTAS / PAPIRO-->
+        <section class="contNotesRight" id="contNotesRight">
+            <button id="probamos">probamos</button>
+            <img id="importantIcon" src="/public/assets/icons/important.png" alt="Note Added Icon">
+            <img id="papyrusIcon" src="/public/assets/icons/papiro.png" alt="Papyrus Icon">
+            <div id="notesModal">
+                <button id="closePapyrusModal">Cerrar</button>
+            </div>
+        </section>
+        <!--MENSAJE FINAL-->
+        <div id="finalMessage">
+            <img class="monster" id="monster" src="/public/assets/img/monsterEyes.png" alt="Monster Eyes">
+            <h1 id="messageFinal">Has liberado lo que nunca debió ser liberado.</h1>
+        </div>
+        <!--CREDITOS FINALES-->
+        <div id="finalCredits">
+            <div id="leftCredits">
+                <h5>Project designed & developed by</h5>
+                <h1>ESTANISLAO SALINAS PREVITE</h1>
+            </div>
+            <div id="middleCredits">
+                <h5>Developed with</h5>
+                <div class="middleCreditsImgs">
+                    <img src="/public/assets/icons/html5.png" alt="Logo HTML">
+                    <img src="/public/assets/icons/css3.png" alt="Logo CSS">
+                    <img src="/public/assets/icons/js.png" alt="Logo JAVASCRIPT">
+                </div>
+            </div>
+            <div id="rightCredits">
+                <h5>For the subject: Frontend I, at</h5>
+                <img src="/public/assets/icons/cesde.png" alt="Logo CESDE">
+            </div>
+        </div>
+        <!--BOTON FINALIZAR-->
+        <div id="finalButton"><button>Finalizar</button></div>
+        <!--IMAGENES DE FONDO FORMANDOSE-->
+        <div id="firstBackgroundImage">
+            <img src="/public/assets/img/introduction.jfif" alt="First Background Image">
+        </div>
+        <div id="secondBackgroundImage">
+            <img src="/public/assets/img/introduction2.jfif" alt="Second Background Image">
+        </div>
+        <div id="thirdBackgroundImage">
+            <img src="/public/assets/img/startImg.png" alt="Third Background Image">
+        </div>
+        <div id="quarterBackgroundImage">
+            <img src="/public/assets/img/quarterImage.jfif" alt="Quarter Background Image">
+        </div>
+        <div id="fifthBackgroundImage">
+            <img src="/public/assets/img/fifthImage.jfif" alt="Fifth Background Image">
+        </div>
+    </main>
+    <!--Link JS-->
+    <script type="module" src="/src/js/app.js"></script>
+</body>
+</html>
